@@ -3,7 +3,6 @@ package com.mt.services;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -15,19 +14,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/employee")
 public class EmployeeService {
 
-	
-	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
-	@ResponseBody
-	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			throws JSONException {
+  @RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
+  @ResponseBody
+  String uploadImage(HttpServletRequest request, HttpServletResponse response,
+      HttpSession httpSession) throws JSONException {
 
-		JSONObject js = new JSONObject();
-		js.put("Name", "Mithun Technologies");
-		js.put("Calling Name", "Mithun");
-		js.put("DOB", "08-Nov-2011");
-		js.put("Hobbies", "Reading Technical Blogs,Teaching, Helping to Poor People..");
-		js.put("Places he like", "His native place");
+    JSONObject js = new JSONObject();
+    js.put("Name", "Athni Technologies");
+    js.put("Calling Name", "Athni");
+    js.put("DOB", "22-Sep-2020");
+    js.put("Hobbies", "Reading blogs, playing Cricket, constant learning, helping the needy!");
+    js.put("Places he like", "Native place");
 
-		return js.toString();
-}
+    return js.toString();
+  }
 }
